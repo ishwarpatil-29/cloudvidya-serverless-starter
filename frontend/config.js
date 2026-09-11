@@ -4,5 +4,5 @@ window.API_BASE = " https://xmxrlkgbj5.execute-api.ap-south-1.amazonaws.com/Prod
 
 // Customize your project here too — this drives the title shown
 // on the page (see index.html / app.js).
-window.APP_NAME = "CloudVidya Starter";
-window.APP_THEME_COLOR = "#FF9900"; // change this to re-theme the whole app
+window.APP_NAME = "EventHub";
+window.APP_THEME_COLOR = "#EF735E";

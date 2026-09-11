@@ -56,6 +56,8 @@ def _create_item(event):
     description = (payload.get("description") or "").strip()
     category = (payload.get("category") or "General").strip()
     participant_name = (payload.get("participantName") or "").strip()
+    event_date = (payload.get("eventDate") or datetime.now(timezone.utc).date().isoformat()).strip()
+    event_time = (payload.get("eventTime") or "18:00").strip()
 
     if not title or not description:
         return _response(400, {"error": "Both 'title' and 'description' are required."})
@@ -67,6 +69,8 @@ def _create_item(event):
         "category": category,
         "status": "OPEN",
         "participantName": participant_name,
+        "eventDate": event_date,
+        "eventTime": event_time,
         "createdAt": datetime.now(timezone.utc).isoformat(),
     }
 
